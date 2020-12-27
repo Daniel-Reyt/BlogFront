@@ -1,0 +1,12 @@
+<h1>Bienvenue sur Mon Blog : {{theme}}</h1>
+<div class="card" *ngFor="let post of listPost; i as index">
+    <div class="card-top">
+        auteur : {{post.author}}
+    </div>
+    <div class="card-body">
+        thème : {{post.theme}}
+    </div>
+    <div class="card-footer">
+        description : {{post.description}}
+    </div>
+</div>
