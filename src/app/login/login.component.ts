@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.enterPassword = this.login_form.controls.lg_password.value;
 
       console.log('login user with username : ' + this.enterUsername + ', password : ' + this.enterPassword);
-      this.http.get('http://localhost:8080/api/user').toPromise().then((data) => {
+      this.http.get('http://localhost:8080/api/user').toPromise().then((data: any) => {
         console.log(data)
         for (let i = 0; i < data.length; i++) {
           if (this.enterUsername === data[i].username) {
